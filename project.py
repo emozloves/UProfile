@@ -66,13 +66,13 @@ os.makedirs(project.config['UPLOAD_PHOTO'], exist_ok = True)
 
 dataBase            = connect(
 
-    host            = "db4free.net",
+    host            = "sql8.freesqldatabase.com",
     
-    user            = "emozloves",
+    user            = "sql8792982",
     
-    password        = "Passw0rd@123!",
+    password        = "GceeN2GzTW",
     
-    database        = "uprofile"
+    database        = "sql8792982"
 )
 
 curData             = dataBase.cursor( dictionary = True )
