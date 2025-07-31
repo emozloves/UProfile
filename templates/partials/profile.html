@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="csrf_token()">
+    <title>UProfile</title>
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,400;1,500;1,800&amp;display=swap">
+    <link rel="stylesheet" href="../static/css/css/fontello-embedded.css">
+    <link rel="stylesheet" href="../static/css/css/normalize.css">
+    <link rel="shortcut icon" href="#">
+    <script src="../static/js/tools/html5shiv.min.js"></script>
+  </head>
+  <body>
+    <div class="base">
+      <div class="image-cover"></div>
+      <div class="parts-top"><img src="../static/images/ghost.png">
+        <div class="bubble">
+          <p>welcome!</p>
+        </div>
+      </div>
+      <div class="parts-bottom">
+        <div class="profile">
+          <div class="profile-infos">
+            <div class="cover-photo-number">
+              <div class="profile-progress" id="cover-progress"></div>
+              <div class="cover">
+                <div class="max-mess">
+                  <p>sorry but max size cover is 50MB</p>
+                </div>
+                <input type="file" accept="image/*" id="cover-input" title="click and upload new cover"><img id="profile-cover-image">
+                <div class="effect-cover"></div>
+              </div>
+              <div class="profile-progress" id="photo-progress"></div>
+              <div class="photo">
+                <input type="file" accept="image/*" id="photo-input" title="click and upload new photo"><img id="profile-user-image">
+                <div class="effect-photo"></div>
+              </div>
+              <p id="profile-user-id">                             </p>
+            </div>
+            <div class="username">
+              <h1 id="profile-username" title="click to edit username"></h1>
+            </div>
+          </div>
+          <div class="buttons"><a id="profile-logout" href="/logout">logout</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/tools/jquery-3.6.3.min.js"></script>
+    <script src="static/js/tools/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='js/project.js') }}"></script>
+  </body>
+</html>

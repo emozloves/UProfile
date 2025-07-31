@@ -1,0 +1,22 @@
+extends index.pug 
+
+block changeTitle
+    title UProfile - Login
+
+block changeWelcomeMess
+    div(class="bubble") #[p hi!]
+
+block changeContent
+    form(id="login-form")
+        .inputs
+            input(id="login-input-email"      type="email"    name="email"        placeholder="Email")
+            i(id="login-if-email"             class="icon-no")
+        .inputs
+            input(id="login-input-password" type="password"   name="password"     placeholder="Password")
+            i(id="login-if-password"          class="icon-no")
+            i(id="login-show-or-hidden-pass" class="icon-hidden-pass")
+        div(class="infos-base")
+            a(href="#" id="dont-have-account") don't have account?
+            a(href="#" id="forget-password") forget password?
+        .buttons
+            button(id="login-button" type="submit") login

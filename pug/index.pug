@@ -1,0 +1,28 @@
+doctype
+
+html
+    head
+        meta(charset="UTF-8")
+        meta(name=""                content="")
+        meta(name="viewport"        content="width=device-width")
+        meta(name="csrf-token"      content="csrf_token()")
+        block changeTitle
+            title UProfile
+        link(rel="stylesheet"       href="../static/css/project.css")
+        link(rel="stylesheet"       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,400;1,500;1,800&display=swap")
+        link(rel="stylesheet"       href="../static/css/css/fontello-embedded.css")
+        link(rel="stylesheet"       href="../static/css/css/normalize.css")
+        link(rel="shortcut icon"    href="#")
+        script(src="../static/js/tools/html5shiv.min.js")
+    body
+        .base
+            div(class="image-cover")
+            div(class="parts-top")
+                img(src="../static/images/ghost.png")
+                block changeWelcomeMess
+                    div(class="bubble") #[p hi!]
+            div(class="parts-bottom")
+                block changeContent
+        script(src="../static/js/tools/jquery-3.6.3.min.js")
+        script(src="static/js/tools/jquery-ui-1.14.1/jquery-ui.min.js")
+        script(src="{{ url_for('static', filename='js/project.js') }}")

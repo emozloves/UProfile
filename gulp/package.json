@@ -1,0 +1,25 @@
+{
+  "name": "land-page-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mike",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^6.0.1",
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.89.2",
+    "static-server": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^6.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}

@@ -1,0 +1,26 @@
+extends index.pug 
+
+block changeTitle
+    title UProfile - CreateNewPassword
+
+block changeWelcomeMess
+    div(class="bubble") #[p final!]
+
+block changeContent
+    form(id="new-password-form" )
+        .inputs
+            input(id="pass-input-password"       type="password"   name="password"     placeholder="password")
+            i(id="pass-if-password"              class="icon-no")
+        div(id="new-instructions" class="pass-instructions" data-scroll="instructions")
+            h1 instructions
+            ul
+                li Password must not be less than 8 characters
+                li A good password should contain numbers and uppercase and lowercase letters
+                li The super password must contain special characters
+        .inputs
+            input(id="pass-input-repassword"     type="password"   name="repassword"     placeholder="re password")
+            i(id="pass-if-repassword"            class="icon-no")
+        div(class="infos-base")
+            a(href="#" id="back-to-login-step-2") back to login page
+        .buttons
+            button(id="pass-button" type="submit") create password

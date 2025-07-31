@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="csrf_token()">
+    <title>UProfile - Register</title>
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,400;1,500;1,800&amp;display=swap">
+    <link rel="stylesheet" href="../static/css/css/fontello-embedded.css">
+    <link rel="stylesheet" href="../static/css/css/normalize.css">
+    <link rel="shortcut icon" href="#">
+    <script src="../static/js/tools/html5shiv.min.js"></script>
+  </head>
+  <body>
+    <div class="base">
+      <div class="image-cover"></div>
+      <div class="parts-top"><img src="../static/images/ghost.png">
+        <div class="bubble">
+          <p>new!</p>
+        </div>
+      </div>
+      <div class="parts-bottom">
+        <form id="reg-form">
+          <div class="inputs">
+            <input id="reg-input-username" type="username" name="username" placeholder="username"><i class="icon-no" id="reg-if-username"></i>
+          </div>
+          <div class="inputs">
+            <input id="reg-input-email" type="email" name="email" placeholder="email"><i class="icon-no" id="reg-if-email"></i>
+          </div>
+          <div class="inputs">
+            <input id="reg-input-password" type="password" name="password" placeholder="password"><i class="icon-no" id="reg-if-password"></i>
+          </div>
+          <div class="instructions" id="instructions" data-scroll="instructions">
+            <h1>instructions</h1>
+            <ul>
+              <li>Password must not be less than 8 characters</li>
+              <li>A good password should contain numbers and uppercase and lowercase letters</li>
+              <li>The super password must contain special characters</li>
+            </ul>
+          </div>
+          <div class="inputs">
+            <input id="reg-input-repassword" type="password" name="repassword" placeholder="re password"><i class="icon-no" id="reg-if-repassword"></i>
+          </div>
+          <div class="infos-base">
+            <div class="check-base"></div><a href="#" id="have-account">have account?</a>
+          </div>
+          <div class="buttons">
+            <button id="reg-button">regester</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../static/js/tools/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="{{ url_for('static', filename='js/project.js') }}"></script>
+  </body>
+</html>

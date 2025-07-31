@@ -1,0 +1,17 @@
+extends index.pug 
+
+block changeTitle
+    title UProfile - CheckEmail
+
+block changeWelcomeMess
+    div(class="bubble") #[p check!]
+
+block changeContent
+    form(id="check-email-form")
+        .inputs
+            input(id="check-input-email"      type="email"    name="email"        placeholder="Email")
+            i(id="check-if-email"             class="icon-no")
+        div(class="infos-base")
+            a(href="#" id="back-to-login-step-1") back to login page
+        .buttons
+            button(id="check-button" type="submit") next step

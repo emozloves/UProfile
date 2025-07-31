@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="csrf_token()">
+    <title>UProfile - CheckEmail</title>
+    <link rel="stylesheet" href="../static/css/project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,400;1,500;1,800&amp;display=swap">
+    <link rel="stylesheet" href="../static/css/css/fontello-embedded.css">
+    <link rel="stylesheet" href="../static/css/css/normalize.css">
+    <link rel="shortcut icon" href="#">
+    <script src="../static/js/tools/html5shiv.min.js"></script>
+  </head>
+  <body>
+    <div class="base">
+      <div class="image-cover"></div>
+      <div class="parts-top"><img src="../static/images/ghost.png">
+        <div class="bubble">
+          <p>check!</p>
+        </div>
+      </div>
+      <div class="parts-bottom">
+        <form id="check-email-form">
+          <div class="inputs">
+            <input id="check-input-email" type="email" name="email" placeholder="Email"><i class="icon-no" id="check-if-email"></i>
+          </div>
+          <div class="infos-base"><a href="#" id="back-to-login-step-1">back to login page</a></div>
+          <div class="buttons">
+            <button id="check-button" type="submit">next step</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../static/js/tools/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="{{ url_for('static', filename='js/project.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+extends index.pug 
+
+block changeTitle
+    title UProfile
+
+block changeWelcomeMess
+    div(class="bubble") #[p welcome!]
+
+block changeContent
+    div(class="profile")
+        div(class="profile-infos")
+            div(class="cover-photo-number")
+                div(id="cover-progress" class="profile-progress")
+                div(class="cover")
+                    div(class="max-mess") #[p sorry but max size cover is 50MB]
+                    input(type="file" accept="image/*" id="cover-input" title="click and upload new cover")
+                    img(id="profile-cover-image")
+                    div(class="effect-cover")
+                div(id="photo-progress" class="profile-progress")
+                div(class="photo")
+                    input(type="file" accept="image/*" id="photo-input" title="click and upload new photo")
+                    img(id="profile-user-image")
+                    div(class="effect-photo")
+                p(id="profile-user-id")                              
+            div(class="username")
+                h1(id="profile-username" title="click to edit username")
+        .buttons
+            a(id="profile-logout" href="/logout") logout
