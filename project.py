@@ -72,9 +72,7 @@ dataBase            = connect(
     
     password        = "Passw0rd@123!",
     
-    database        = "uprofile",
-
-    ssl_disabled    = True
+    database        = "uprofile"
 )
 
 curData             = dataBase.cursor( dictionary = True )
