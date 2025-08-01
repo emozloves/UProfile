@@ -66,13 +66,13 @@ os.makedirs(project.config['UPLOAD_PHOTO'], exist_ok = True)
 
 dataBase            = connect(
 
-    host            = "sql8.freesqldatabase.com",
+    host            = "sql105.infinityfree.com",
     
-    user            = "sql8792982",
+    user            = "if0_39606390",
     
-    password        = "GceeN2GzTW",
+    password        = "fJLyUs9syJQYG",
     
-    database        = "sql8792982"
+    database        = "if0_39606390_db_uprofile"
 )
 
 curData             = dataBase.cursor( dictionary = True )
