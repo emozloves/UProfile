@@ -8,7 +8,9 @@ from werkzeug.utils import secure_filename
 
 from flask import Flask,render_template,request,redirect,jsonify,url_for,session
 
-from mysql.connector import connect
+import psycopg2
+
+import socket
 
 from argon2 import PasswordHasher
 
@@ -64,24 +66,43 @@ os.makedirs(project.config['UPLOAD_PHOTO'], exist_ok = True)
 
 ##- ربط قاعدة البيانات مع المشروع و انشاء نفق كورسور و اعطائه ميزة القواميس
 
-dataBase            = connect(
+hostName = socket.gethostname()
 
-    host            = "https://uprofile.d-syria.com",
-    
-    user            = "root",
-    
-    password        = "1-LY6W*bc6z6Pw",
-    
-    database        = "uprofile"
-)
+if hostName == "vps-4714c875":
 
-curData             = dataBase.cursor( dictionary = True )
+    dataBase            = psycopg2.connect(
+
+        host            = "localhost",
+        
+        user            = "root",
+        
+        password        = "1-LY6W*bc6z6Pw",
+        
+        database        = "uprofile"
+    )
+
+    curData             = dataBase.cursor()
+
+else:
+
+    dataBase            = psycopg2.connect(
+
+        host            = "localhost",
+        
+        user            = "root",
+        
+        password        = "",
+        
+        database        = "uprofile"
+    )
+
+    curData             = dataBase.cursor()
 
 ########## - ########## - ########## - ########## - ########## - ##########
 
 ##- انشاء جدول بيانات المستخدمين مع القيم الخاصة به
 
-curData.execute("CREATE TABLE IF NOT EXISTS users(id INT AUTO_INCREMENT PRIMARY KEY,username TEXT,email TEXT,password TEXT,photo TEXT,cover TEXT)")
+curData.execute("CREATE TABLE IF NOT EXISTS users(id INT SERIAL PRIMARY KEY,username TEXT,email TEXT,password TEXT,photo TEXT,cover TEXT)")
 
 ########## - ########## - ########## - ########## - ########## - ##########
 
