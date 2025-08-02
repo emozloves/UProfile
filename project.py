@@ -66,13 +66,13 @@ os.makedirs(project.config['UPLOAD_PHOTO'], exist_ok = True)
 
 dataBase            = connect(
 
-    host            = "sql105.infinityfree.com",
+    host            = "https://uprofile.d-syria.com",
     
-    user            = "if0_39606390",
+    user            = "root",
     
-    password        = "fJLyUs9syJQYG",
+    password        = "1-LY6W*bc6z6Pw",
     
-    database        = "if0_39606390_db_uprofile"
+    database        = "uprofile"
 )
 
 curData             = dataBase.cursor( dictionary = True )
